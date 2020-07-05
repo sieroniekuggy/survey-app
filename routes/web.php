@@ -31,4 +31,5 @@ Route::get('/hello', function () {
 
     //using compact method if you have variable and string with same name
     return view('subviews.hello')->with(compact('coolString'));
+    return view('subviews.hello',compact('coolString'));
 });
