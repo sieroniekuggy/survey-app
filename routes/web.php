@@ -18,9 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', function () {
-    return 'hello';
-});
 
-Route::get('/hello/sie', function () {
-    return 'helloooo';
+    $var = 'Hello from Routes';
+
+    //As an alternative to passing a complete array of data to the view helper function,
+    //you may use the with method to add individual pieces of data to the view:
+    return view('subviews.hello')->with('someData', 'returned using with method.');
 });
