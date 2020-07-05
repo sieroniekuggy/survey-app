@@ -19,14 +19,16 @@ Route::get('/', function () {
 
 Route::get('/hello', function () {
 
-    $var = 'Hello from Routes';
+    $coolString = 'Hello from Routes again';
+    //using data array
+        // return view('subviews.hello', [
+        //     'coolString'=>$coolString
+        // ]);
 
     //As an alternative to passing a complete array of data to the view helper function,
     //you may use the with method to add individual pieces of data to the view:
     //return view('subviews.hello')->with('someData', 'returned using with method.');
 
-    //using data array
-    return view('subviews.hello', [
-        'someData'=>$var
-    ]);
+    //using compact method if you have variable and string with same name
+    return view('subviews.hello')->with(compact('coolString'));
 });
