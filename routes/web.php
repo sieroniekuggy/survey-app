@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 Route::get('/about', 'HelloController@about');
 Route::get('/services', 'HelloController@services');
+Route::get('sie', 'SieController@index');

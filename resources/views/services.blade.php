@@ -11,7 +11,7 @@
         @endforeach --}}
 
         @forelse ($services as $service)
-            <li>{{ $service }}</li>
+            <li>{{ $service->name }}</li>
         @empty
             <li>NO services</li>
         @endforelse

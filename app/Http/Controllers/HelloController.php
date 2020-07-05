@@ -22,7 +22,7 @@ class HelloController extends Controller
 
         $services = \App\Service::all();
 
-        dd($services);
+        // dd($services);
 
         return view('services', compact('services'));
     }
