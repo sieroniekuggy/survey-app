@@ -7,8 +7,5 @@ Route::get('/', function () {
 });
 
 
-// Route::get('/about', 'HelloController@about');
-// Route::get('/services', 'HelloController@services');
-
-Route::view('/about', 'about');
-Route::view('/services', 'services');
+Route::get('/about', 'HelloController@about');
+Route::get('/services', 'HelloController@services');
