@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 
 class HelloController extends Controller
 {
-    //
-    public function index()
+    public function about()
     {
-        # code...
-        $var = 'im the goat';
-        return view('subviews.hello')->with(compact('var'));
+        return view('about');
+    }
+
+    public function services()
+    {
+        return view('services');
     }
 }
