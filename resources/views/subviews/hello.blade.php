@@ -1,3 +1,3 @@
-<h1>{{ $coolString }}</h1>
+<h1>{{ $var }}</h1>
 
 <p>Learning laravel</p>
