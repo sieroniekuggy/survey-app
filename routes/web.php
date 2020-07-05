@@ -23,5 +23,10 @@ Route::get('/hello', function () {
 
     //As an alternative to passing a complete array of data to the view helper function,
     //you may use the with method to add individual pieces of data to the view:
-    return view('subviews.hello')->with('someData', 'returned using with method.');
+    //return view('subviews.hello')->with('someData', 'returned using with method.');
+
+    //using data array
+    return view('subviews.hello', [
+        'someData'=>$var
+    ]);
 });
