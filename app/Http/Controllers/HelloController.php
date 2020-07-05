@@ -13,12 +13,17 @@ class HelloController extends Controller
 
     public function services()
     {
-        $services = [
-            'Service 1',
-            'Service 2',
-            'Service 3',
-            'Service 4',
-        ];
+        // $services = [
+        //     'Service 1',
+        //     'Service 2',
+        //     'Service 3',
+        //     'Service 4',
+        // ];
+
+        $services = \App\Service::all();
+
+        dd($services);
+
         return view('services', compact('services'));
     }
 }
