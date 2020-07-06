@@ -13,7 +13,7 @@
     </form>
 
     @foreach ($errors->all() as $error)
-        {{$error}}
+        <p style="color:red">{{$error}}</p>
     @endforeach
 
     <ul>
