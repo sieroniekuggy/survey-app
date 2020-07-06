@@ -27,6 +27,13 @@ class CustomerController extends Controller
 
         \App\Customer::create($data);
 
-        return redirect('/customer');
+        return redirect('/customers');
+    }
+
+    public function show($customerId)
+    {
+        $customer = \App\Customer::findorFail($customerId);
+        dd($customer);
+        // return view('customer.index', compact('customer'));
     }
 }

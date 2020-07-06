@@ -1,20 +1,33 @@
-<h1>Create Customers</h1>
+@extends('app')
 
-<form action="/customer" method="POST">
-     <div class="form-group">
-        <label for="name">name</label>
-        <input type="text" name="name" autocomplete="off"/>
+@section('title')
+    Add Customers
+@endsection
+
+@section('content')
+
+    <div>
+        <a href="/customers">Back</a>
     </div>
+    
+    <h1>Create Customers</h1>
 
-    <div class="form-group">
-        <label for="email">email</label>
-        <input type="text" name="email" autocomplete="off"/>
-    </div>
+    <form action="/customers" method="POST">
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" name="name" autocomplete="off"/>
+        </div>
 
-    @foreach ($errors->all() as $error)
-        <p style="color:green">{{$error}}</p>
-    @endforeach
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" name="email" autocomplete="off"/>
+        </div>
 
-        @csrf
-        <button type="submit">Add New Customer</button>
-</form>
+        @foreach ($errors->all() as $error)
+            <p style="color:green">{{$error}}</p>
+        @endforeach
+
+            @csrf
+            <button type="submit">Add New Customer</button>
+    </form>
+@endsection
