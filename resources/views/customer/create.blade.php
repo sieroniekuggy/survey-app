@@ -11,7 +11,6 @@
         <input type="text" name="email" autocomplete="off"/>
     </div>
 
-
     @foreach ($errors->all() as $error)
         <p style="color:red">{{$error}}</p>
     @endforeach
