@@ -12,7 +12,7 @@
     </div>
 
     @foreach ($errors->all() as $error)
-        <p style="color:red">{{$error}}</p>
+        <p style="color:green">{{$error}}</p>
     @endforeach
 
         @csrf
