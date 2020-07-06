@@ -22,10 +22,11 @@ class ServiceController extends Controller
         $data = request()->validate([
             'name'=>'required|min:3|max:30'
         ]);
-        $service = new \App\Service();
+        // $service = new \App\Service();
 
-        $service->name = request('name');
-        $service->save();
+        // $service->name = request('name');
+        // $service->save();
+        \App\Service::create($data);
 
         return redirect()->back();
     }
