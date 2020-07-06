@@ -20,7 +20,7 @@ class ServiceController extends Controller
     {
         //validation
         $data = request()->validate([
-            'name'=>'required|min:3|max:10'
+            'name'=>'required|min:3|max:30'
         ]);
         $service = new \App\Service();
 
