@@ -33,7 +33,7 @@ class CustomerController extends Controller
     public function show($customerId)
     {
         $customer = \App\Customer::findorFail($customerId);
-        dd($customer);
-        // return view('customer.index', compact('customer'));
+        // dd($customer);
+        return view('customer.index');
     }
 }
