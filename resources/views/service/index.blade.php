@@ -5,11 +5,13 @@
 @endsection
 
 @section('content')
-    <ul>
-        {{-- @foreach ($services as $service)
-            <li>{{ $service }}</li>
-        @endforeach --}}
 
+    <form action="/service" method="POST">
+        <input type="text" name="name" autocomplete="off"/>
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
         @forelse ($services as $service)
             <li>{{ $service->name }}</li>
         @empty
