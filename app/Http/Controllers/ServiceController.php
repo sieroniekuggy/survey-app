@@ -18,9 +18,11 @@ class ServiceController extends Controller
 
     public function store()
     {
-       $service = new \App\Service();
-       $service->name = request('name');
-       $service-save();
-       return redirect()->back();
+        $service = new \App\Service();
+        
+        $service->name = request('name');
+        $service-save();
+
+        return redirect()->back();
     }
 }
