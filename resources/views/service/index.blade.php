@@ -12,6 +12,10 @@
         <button type="submit">Add</button>
     </form>
 
+    @foreach ($errors->all() as $error)
+        {{$error}}
+    @endforeach
+
     <ul>
         @forelse ($services as $service)
             <li>{{ $service->name }}</li>
