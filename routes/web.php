@@ -8,5 +8,6 @@ Route::get('/', function () {
 
 
 Route::get('/about', 'HelloController@about');
+
 Route::get('/service', 'ServiceController@index');
 Route::post('/service', 'ServiceController@store');

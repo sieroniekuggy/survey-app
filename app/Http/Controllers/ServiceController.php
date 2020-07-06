@@ -15,4 +15,12 @@ class ServiceController extends Controller
 
         return view('service.index', compact('services'));
     }
+
+    public function store()
+    {
+       $service = new \App\Service();
+       $service->name = request('name');
+       $service-save();
+       return redirect()->back();
+    }
 }

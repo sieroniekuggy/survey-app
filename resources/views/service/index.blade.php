@@ -8,6 +8,7 @@
 
     <form action="/service" method="POST">
         <input type="text" name="name" autocomplete="off"/>
+        @csrf
         <button type="submit">Add</button>
     </form>
 
