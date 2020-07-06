@@ -34,6 +34,6 @@ class CustomerController extends Controller
     {
         $customer = \App\Customer::findorFail($customerId);
         // dd($customer);
-        return view('customer.index');
+        return view('customer.index', compact('customer'));
     }
 }
