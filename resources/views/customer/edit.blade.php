@@ -1,26 +1,28 @@
 @extends('app')
 
 @section('title')
-    Add Customers
+    Edit Customers
 @endsection
 
 @section('content')
 
     <div>
-        <a href="/customers">Back</a>
+        <a href="/#">Back</a>
     </div>
     
-    <h1>Create Customers</h1>
+    <h1>Edit Customers Details</h1>
 
-    <form action="/customers" method="POST">
+    <form action="/customers/{{ $customer->id }}" method="POST">
+    @method('PATCH')
+
         <div class="form-group">
             <label for="name">name</label>
-            <input type="text" name="name" autocomplete="off" value="{{ old('name') }}"/>
+            <input type="text" name="name" autocomplete="off" value="{{ $customer->name }}"/>
         </div>
 
         <div class="form-group">
             <label for="email">email</label>
-            <input type="text" name="email" autocomplete="off" value="{{ old('email') }}"/>
+            <input type="text" name="email" autocomplete="off" value="{{ $customer->email }}"/>
         </div>
 
         @foreach ($errors->all() as $error)
@@ -28,6 +30,6 @@
         @endforeach
 
             @csrf
-            <button type="submit">Add New Customer</button>
+            <button type="submit">Save Customer</button>
     </form>
 @endsection
