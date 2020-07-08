@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Mail\WelcomeMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CustomerController extends Controller
 {
@@ -23,6 +25,8 @@ class CustomerController extends Controller
     public function store()
     {
         $customer = Customer::create($this->validatedData());
+
+        Mail::to($customer->email)->send(new WelcomeMail());
 
         return redirect('/customers/' . $customer->id);
     }

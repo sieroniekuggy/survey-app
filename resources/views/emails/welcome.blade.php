@@ -1,10 +1,10 @@
 @component('mail::message')
-# Introduction
+# Hello from Skug
 
-The body of your message.
+Welcoime to my new App.
 
-@component('mail::button', ['url' => ''])
-Button Text
+@component('mail::button', ['url' => 'https://sieroniekuggy.co.zw'])
+Visit
 @endcomponent
 
 Thanks,<br>
