@@ -6,6 +6,8 @@
 
 <div>
     <a href="/customers/create">Add New Customer</a>
+    <a href="/customers?active=1">active</a>
+    <a href="/customers?active=0">Inactive</a>
 </div>
 
 @section('content')
